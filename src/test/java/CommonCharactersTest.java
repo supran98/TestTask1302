@@ -37,5 +37,14 @@ public class CommonCharactersTest {
         var testMap6 = CommonCharacters.commonCharacters(new String[]{"www"});
         Map<String, List<Integer>> expectedMap6 = new HashMap<>();
         Assertions.assertEquals(testMap6, expectedMap6);
+
+        var testMap7 = CommonCharacters.commonCharacters(new String[]{"AAw", "aaw"});
+        Map<String, List<Integer>> expectedMap7 = new HashMap<>();
+        Assertions.assertEquals(testMap7, expectedMap7);
+
+        var testMap8 = CommonCharacters.commonCharacters(new String[]{"AAw", "aaw", "aaw"});
+        Map<String, List<Integer>> expectedMap8 = new HashMap<>();
+        expectedMap8.put("aaw", List.of(1, 2));
+        Assertions.assertEquals(testMap8, expectedMap8);
     }
 }
